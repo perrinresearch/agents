@@ -1,0 +1,23 @@
+# Example user systemd unit for the Foundry Cursor worker on WSL.
+# Install:
+#   mkdir -p ~/.config/systemd/user
+#   cp deploy/foundry-cursor-worker.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now foundry-cursor-worker.service
+#
+# Requires ~/perrinresearch/agents/.env with FOUNDRY_* and CURSOR_API_KEY.
+
+[Unit]
+Description=Foundry Cursor local agent worker
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/perrinresearch/agents
+Environment=PYTHONUNBUFFERED=1
+ExecStart=%h/perrinresearch/agents/.venv/bin/python -m src.cursor_worker
+Restart=on-failure
+RestartSec=15
+
+[Install]
+WantedBy=default.target

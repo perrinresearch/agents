@@ -1,0 +1,117 @@
+{
+  "projects": {
+    "waypoint": {
+      "path": "/home/scott/perrinresearch/repos/waypoint",
+      "github": "https://github.com/perrinresearch/waypoint.git",
+      "notes": "Formerly ~/projects/agent-test"
+    },
+    "PR-waypoint": {
+      "path": "/home/scott/perrinresearch/repos/waypoint",
+      "github": "https://github.com/perrinresearch/waypoint.git"
+    },
+    "scholarweave": {
+      "path": "/home/scott/perrinresearch/repos/scholarweave",
+      "github": "https://github.com/perrinresearch/ScholarWeave.git",
+      "notes": "Formerly ~/projects/literatureNetwork"
+    },
+    "PR-scholarweave": {
+      "path": "/home/scott/perrinresearch/repos/scholarweave",
+      "github": "https://github.com/perrinresearch/ScholarWeave.git"
+    },
+    "foundry": {
+      "path": "/home/scott/perrinresearch/repos/foundry",
+      "github": "https://github.com/perrinresearch/foundry.git",
+      "notes": "VPS system of record; clone for Foundry feature work only"
+    },
+    "PR-foundry": {
+      "path": "/home/scott/perrinresearch/repos/foundry",
+      "github": "https://github.com/perrinresearch/foundry.git"
+    },
+    "perrinresearch.com": {
+      "path": "/home/scott/perrinresearch/repos/perrinresearch.com",
+      "github": "https://github.com/perrinresearch/perrinresearch.com.git"
+    },
+    "restore79-dash": {
+      "path": "/home/scott/perrinresearch/repos/restore79-dash",
+      "github": "https://github.com/perrinresearch/restore79-dash.git",
+      "notes": "Restore79 dashboard"
+    },
+    "PR-restore79": {
+      "path": "/home/scott/perrinresearch/repos/restore79-dash",
+      "github": "https://github.com/perrinresearch/restore79-dash.git"
+    },
+    "restore79": {
+      "path": "/home/scott/perrinresearch/repos/restore79-dash",
+      "github": "https://github.com/perrinresearch/restore79-dash.git"
+    },
+    "exonseq": {
+      "path": "/home/scott/perrinresearch/repos/exonseq",
+      "github": "https://github.com/perrinresearch/exonSeq.git"
+    },
+    "homeboard": {
+      "path": "/home/scott/perrinresearch/repos/homeboard",
+      "github": "https://github.com/perrinresearch/HomeBoard.git"
+    },
+    "cost_analysis": {
+      "path": "/home/scott/perrinresearch/repos/cost_analysis",
+      "github": "https://github.com/perrinresearch/cost_analysis.git"
+    },
+    "genetool": {
+      "path": "/home/scott/perrinresearch/repos/genetool",
+      "github": "https://github.com/perrinresearch/genetool.git"
+    },
+    "tx-status": {
+      "path": "/home/scott/perrinresearch/repos/tx-status",
+      "github": "https://github.com/perrinresearch/tx-status.git"
+    },
+    "worshiplesson": {
+      "path": "/home/scott/perrinresearch/repos/worshiplesson",
+      "github": "https://github.com/perrinresearch/WorshipLesson.git"
+    },
+    "PR-004": {
+      "path": "/home/scott/perrinresearch/repos/leadingwithattention",
+      "github": "https://github.com/perrinresearch/leadingwithattention.git",
+      "notes": "Provisioned by project_sync for Foundry PR-004"
+    },
+    "leadingwithattention": {
+      "path": "/home/scott/perrinresearch/repos/leadingwithattention",
+      "github": "https://github.com/perrinresearch/leadingwithattention.git",
+      "notes": "Provisioned by project_sync for Foundry PR-004"
+    },
+    "PR-leadingwithattention": {
+      "path": "/home/scott/perrinresearch/repos/leadingwithattention",
+      "github": "https://github.com/perrinresearch/leadingwithattention.git",
+      "notes": "Provisioned by project_sync for Foundry PR-004"
+    },
+    "PR-005": {
+      "path": "/home/scott/perrinresearch/repos/muscleblog",
+      "github": "https://github.com/perrinresearch/muscleblog.git",
+      "notes": "Provisioned by project_sync for Foundry PR-005"
+    },
+    "muscleblog": {
+      "path": "/home/scott/perrinresearch/repos/muscleblog",
+      "github": "https://github.com/perrinresearch/muscleblog.git",
+      "notes": "Provisioned by project_sync for Foundry PR-005"
+    },
+    "PR-muscleblog": {
+      "path": "/home/scott/perrinresearch/repos/muscleblog",
+      "github": "https://github.com/perrinresearch/muscleblog.git",
+      "notes": "Provisioned by project_sync for Foundry PR-005"
+    },
+    "PR-007": {
+      "path": "/home/scott/perrinresearch/repos/foundry-eval",
+      "github": "https://github.com/perrinresearch/foundry-eval.git",
+      "notes": "Provisioned by project_sync for Foundry PR-007"
+    },
+    "foundry-eval": {
+      "path": "/home/scott/perrinresearch/repos/foundry-eval",
+      "github": "https://github.com/perrinresearch/foundry-eval.git",
+      "notes": "Provisioned by project_sync for Foundry PR-007"
+    },
+    "PR-foundry-eval": {
+      "path": "/home/scott/perrinresearch/repos/foundry-eval",
+      "github": "https://github.com/perrinresearch/foundry-eval.git",
+      "notes": "Provisioned by project_sync for Foundry PR-007"
+    }
+  }
+}

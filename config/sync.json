@@ -1,0 +1,8 @@
+{
+  "repos_root": "/home/scott/perrinresearch/repos",
+  "github_owner": "perrinresearch",
+  "poll_sec": 60,
+  "dry_run": true,
+  "map_path": "/home/scott/perrinresearch/agents/config/project_repos.json",
+  "private": true
+}
