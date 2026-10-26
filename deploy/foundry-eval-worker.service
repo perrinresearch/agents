@@ -1,0 +1,34 @@
+# Systemd user service for foundry-eval worker
+# Install:
+#   mkdir -p ~/.config/systemd/user
+#   cp deploy/foundry-eval-worker.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now foundry-eval-worker.service
+#
+# Or use: make install-services && make enable-services
+#
+# IMPORTANT: This service requires:
+# 1. foundry-eval repo cloned (default: ~/perrinresearch/repos/foundry-eval)
+# 2. Virtual environment set up in that repo with foundry-eval dependencies
+# 3. .env file in the foundry-eval repo with FOUNDRY_* credentials and OLLAMA_HOST
+# 4. Ollama running (separate service or manually started)
+#
+# To customize the foundry-eval path, set FOUNDRY_EVAL_PATH in ~/.pam_environment
+# or add it to this service file's Environment= directive.
+
+[Unit]
+Description=Foundry eval worker (Ollama-based)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/perrinresearch/repos/foundry-eval
+Environment=PYTHONUNBUFFERED=1
+# Uncomment and adjust if foundry-eval is in a different location:
+# Environment=FOUNDRY_EVAL_PATH=%h/path/to/foundry-eval
+ExecStart=%h/perrinresearch/repos/foundry-eval/.venv/bin/python -m foundry_eval.worker
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target

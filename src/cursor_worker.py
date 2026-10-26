@@ -21,6 +21,7 @@ from typing import Any
 
 from dotenv import load_dotenv
 
+from .config_loader import get_repos_root
 from .foundry_client import FoundryClient
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,12 +54,7 @@ def resolve_cwd(claim: dict[str, Any], repo_map: dict) -> Path:
             return path.resolve()
 
     slug = (claim.get("repo_slug") or "").strip()
-    repos_root = Path(
-        os.environ.get(
-            "REPOS_ROOT",
-            str(Path.home() / "perrinresearch" / "repos"),
-        )
-    ).expanduser()
+    repos_root = get_repos_root()
     if slug:
         candidate = repos_root / slug
         if candidate.is_dir():

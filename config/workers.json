@@ -1,0 +1,26 @@
+{
+  "repos_root": "/home/scott/perrinresearch/repos",
+  "foundry_eval_path": "/home/scott/perrinresearch/repos/foundry-eval",
+  "workers": {
+    "cursor": {
+      "enabled": true,
+      "description": "Foundry Cursor SDK worker (code changes)",
+      "command": "python -m src.cursor_worker",
+      "env_required": ["CURSOR_API_KEY", "FOUNDRY_API_URL", "FOUNDRY_EMAIL", "FOUNDRY_PASSWORD"]
+    },
+    "project_sync": {
+      "enabled": true,
+      "description": "Foundry project provisioner (GitHub repo sync)",
+      "command": "python -m src.project_sync",
+      "env_required": ["FOUNDRY_API_URL", "FOUNDRY_EMAIL", "FOUNDRY_PASSWORD"]
+    },
+    "foundry_eval": {
+      "enabled": true,
+      "description": "Foundry eval worker (requires foundry-eval repo + Ollama)",
+      "command": "python -m foundry_eval.worker",
+      "working_dir": "${foundry_eval_path}",
+      "env_required": ["FOUNDRY_API_URL", "FOUNDRY_EMAIL", "FOUNDRY_PASSWORD", "OLLAMA_HOST"],
+      "notes": "Requires separate venv and .env in foundry-eval repo"
+    }
+  }
+}

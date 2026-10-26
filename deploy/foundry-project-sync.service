@@ -1,0 +1,25 @@
+# Systemd user service for Foundry project_sync (GitHub repo provisioner)
+# Install:
+#   mkdir -p ~/.config/systemd/user
+#   cp deploy/foundry-project-sync.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now foundry-project-sync.service
+#
+# Or use: make install-services && make enable-services
+#
+# Requires ~/perrinresearch/agents/.env with FOUNDRY_* credentials.
+
+[Unit]
+Description=Foundry project sync worker
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/perrinresearch/agents
+Environment=PYTHONUNBUFFERED=1
+ExecStart=%h/perrinresearch/agents/.venv/bin/python -m src.project_sync
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target

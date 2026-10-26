@@ -24,6 +24,7 @@ from typing import Any
 
 from dotenv import load_dotenv
 
+from .config_loader import get_repos_root
 from .foundry_client import FoundryClient
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -54,6 +55,11 @@ def load_sync_config(path: Path | None = None) -> dict[str, Any]:
     if owner != ALLOWED_OWNER:
         raise RuntimeError(f"github_owner must be {ALLOWED_OWNER!r}, got {owner!r}")
     cfg["github_owner"] = owner
+    
+    # Use unified config for repos_root if not explicitly set
+    if "REPOS_ROOT" in os.environ or not cfg.get("repos_root"):
+        cfg["repos_root"] = str(get_repos_root())
+    
     return cfg
 
 
